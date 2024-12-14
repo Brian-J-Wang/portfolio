@@ -1,0 +1,13 @@
+.tech-spread {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 48px;
+}
+
+.tech-spread__break {
+    flex-basis: 100%;
+}
+

@@ -1,0 +1,13 @@
+.hero-banner {
+    background-image: linear-gradient(to top right, #09203F, #537895);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-banner__hello {
+    font-size: 60px;
+    text-align: center;
+    font-family: Knewave;
+}

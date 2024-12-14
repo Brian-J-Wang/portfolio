@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Knewave;
+    src: url(./assets/Knewave/Knewave-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Tinos;
+    src: url(./assets/Tinos/Tinos-Regular.ttf) format('truetype');
+}
+
+body {
+    margin: 0px;
+    font-family: Tinos, 'Times New Roman', Times, serif;
+}
+
+h1 {
+
+}
