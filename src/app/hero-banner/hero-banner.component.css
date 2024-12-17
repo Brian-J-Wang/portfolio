@@ -6,8 +6,19 @@
     justify-content: space-between;
 }
 
-.hero-banner__hello {
-    font-size: 60px;
-    text-align: center;
-    font-family: Knewave;
+.hero-banner__left {
+ height: 100%;
+ display: flex;
+ align-items: center;
+}
+
+.hero-banner__text-container {
+  background-color: #061223;
+  color: white;
+  width: 320px;
+  height: 400px;
+  margin-left: 180px;
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 3px;
 }

@@ -1,6 +1,14 @@
 .header {
-    display: flex;
-    justify-content: end;
-    gap: 12px;
-    padding-right: 12px;
+  display: flex;
+  justify-content: end;
+  gap: 12px;
+  padding-right: 12px;
+}
+
+.nav-link {
+font-size: 20px;
+}
+
+.nav-link__active {
+  font-weight: 600;
 }

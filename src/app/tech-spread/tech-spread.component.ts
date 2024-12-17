@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
-import { TechIconComponent } from "./tech-icon/tech-icon.component";
+import { Component, Input } from '@angular/core';
+import { techIcon, TechIconComponent } from "./tech-icon/tech-icon.component";
+import techList from './tech-icon-list';
+import { vec2 } from '../../utils/vec2';
 
-//requirements
+const gap: number = 8;   //the spacing between each component, measured in px;
+const size: number = 48;  //ths size of each component, measured in px
+const stepSize: number = 0.5 * (gap + size);
 
 @Component({
   selector: 'tech-spread',
@@ -10,5 +14,25 @@ import { TechIconComponent } from "./tech-icon/tech-icon.component";
   styleUrl: './tech-spread.component.css'
 })
 export class TechSpreadComponent {
-  
+  techSpreadList: techIcon[] = techList.map((item) => {
+    return { ...item, position: this.calculateCoordinates(item.position) }
+  });
+  isFiltering: boolean = false;
+
+  handleIconToggled() {
+    this.isFiltering = true;
+  }
+
+  calculateCoordinates(pos: vec2): vec2 {
+    const fitsConstraint = (pos.x + pos.y) % 2 == 0;
+
+    if (!fitsConstraint) {
+      throw new Error('Given Coordinates does not fit constraint');
+    }
+
+    return {
+      x: pos.x * stepSize,
+      y: pos.y * stepSize
+    }
+  }
 }
