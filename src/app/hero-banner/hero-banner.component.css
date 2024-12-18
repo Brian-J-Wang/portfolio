@@ -1,9 +1,9 @@
 .hero-banner {
-    background-image: linear-gradient(to top right, #09203F, #537895);
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-image: linear-gradient(to top right, #09203F, #537895);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hero-banner__left {
@@ -21,4 +21,15 @@
   padding: 24px;
   box-sizing: border-box;
   border-radius: 3px;
+}
+
+.hero-banner__socials {
+  margin-top: 64px;
+  justify-self: end;
+  display: flex;
+}
+
+.hero-banner__social-icon {
+  height: 32px;
+  width: 32px;
 }

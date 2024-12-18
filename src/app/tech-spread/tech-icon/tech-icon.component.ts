@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, Input, output } from '@angular/core';
+import { Component, Input, OnInit, output } from '@angular/core';
 import { vec2 } from '../../../utils/vec2';
 
 export type techIcon = {
@@ -34,14 +34,20 @@ export type techIcon = {
         })
       ),
       transition('not-selected => selected', [animate('0.1s')]),
-      transition('selected => not-selected', [animate('0.1s')])
+      transition('selected => not-selected', [animate('0.1s')]),
+      transition('not-filtering => not-selected', [animate('0.1s')])
     ])
   ]
 })
-export class TechIconComponent {
+export class TechIconComponent implements OnInit{
+  ngOnInit(): void {
+    this.positionCSS = `top: ${this.position.y}px; left: ${this.position.x}px`
+  }
+
   @Input() name: string = "";
   @Input() link: string = "";
   @Input() position: vec2 = {x: 0, y: 0};
+  positionCSS: string = "";
   @Input() isFiltering: boolean = false;
 
   isSelected: boolean = false;

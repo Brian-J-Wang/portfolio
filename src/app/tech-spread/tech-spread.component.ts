@@ -4,7 +4,7 @@ import techList from './tech-icon-list';
 import { vec2 } from '../../utils/vec2';
 
 const gap: number = 8;   //the spacing between each component, measured in px;
-const size: number = 48;  //ths size of each component, measured in px
+const size: number = 64;  //ths size of each component, measured in px
 const stepSize: number = 0.5 * (gap + size);
 
 @Component({
@@ -24,15 +24,10 @@ export class TechSpreadComponent {
   }
 
   calculateCoordinates(pos: vec2): vec2 {
-    const fitsConstraint = (pos.x + pos.y) % 2 == 0;
-
-    if (!fitsConstraint) {
-      throw new Error('Given Coordinates does not fit constraint');
-    }
 
     return {
-      x: pos.x * stepSize,
-      y: pos.y * stepSize
+      x: pos.x * stepSize - 32,
+      y: pos.y * stepSize * 2 - 32
     }
   }
 }

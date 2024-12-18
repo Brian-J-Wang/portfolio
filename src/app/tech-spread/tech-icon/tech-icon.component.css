@@ -1,8 +1,11 @@
 .tech-icon {
-    background-color: red;
+    background-color: whitesmoke;
+    padding: 8px;
     width: 64px;
     height: 64px;
     border-radius: 8px;
     overflow: hidden;
+    position: absolute;
+    box-sizing: border-box;
 }
 

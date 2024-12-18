@@ -1,4 +1,7 @@
 <div class="tech-spread">
+  <h1 class="tech-spread__tool-blurb">I work with a growing set of tools</h1>
+  <p class="tech-spread__tool-blurb">You can click on the icons to see some projects that I have been working on.</p>
+  <div class="tech-spread__container">
     @for (item of techSpreadList; track $index) {
       <tech-icon
         [name]="item.name"
@@ -8,4 +11,5 @@
         (iconToggled)="handleIconToggled()"
       />
     }
+  </div>
 </div>
